@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Textbox from "../components/Textbox";
+import Loading from "../components/Loader";
 import Button from "../components/Button";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setCredentials } from "../redux/slices/authSlice"
 import { useLoginMutation } from "../redux/slices/api/authApiSlice";
 import { toast } from "sonner";
 
@@ -16,12 +18,16 @@ const Login = () => {
   } = useForm();
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [login, { isLoading }] = useLoginMutation();
 
   const submitHandler = async (data) => {
     try {
       const result = await login(data).unwrap();
+      dispatch(setCredentials(result));
+      navigate("/")
+      toast.info("Hey👋🏻 Welcome back!");
     } catch (error) {
       console.log(error);
       toast.error(error?.data?.message || error.message);
@@ -94,11 +100,11 @@ const Login = () => {
                 Forget Password?
               </span>
 
-              <Button
+              {isLoading ? <Loading /> : <Button
                 type='submit'
                 label='Submit'
                 className='w-full h-10 bg-blue-700 text-white rounded-full'
-              />
+              />}
             </div>
           </form>
         </div>
