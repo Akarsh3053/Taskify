@@ -140,7 +140,6 @@ const UserTable = ({ users }) => {
 };
 const Dashboard = () => {
   const { data, isLoading } = useGetDashboardStatsQuery()
-  console.log(data)
 
   if (isLoading) {
     return (
