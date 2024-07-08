@@ -1,13 +1,13 @@
 import { Listbox, Transition } from "@headlessui/react";
+import clsx from "clsx";
 import { Fragment, useEffect, useState } from "react";
 import { BsChevronExpand } from "react-icons/bs";
-import { summary } from "../../assets/data";
-import clsx from "clsx";
-import { getInitials } from "../../utils";
 import { MdCheck } from "react-icons/md";
+import { useGetTeamListQuery } from "../../redux/slices/api/userApiSlice";
+import { getInitials } from "../../utils";
 
 const UserList = ({ setTeam, team }) => {
-  const data = summary.users;
+  const { data, isLoading } = useGetTeamListQuery()
   const [selectedUsers, setSelectedUsers] = useState([]);
 
   const handleChange = (el) => {
@@ -20,7 +20,7 @@ const UserList = ({ setTeam, team }) => {
     } else {
       setSelectedUsers(team);
     }
-  }, []);
+  }, [isLoading]);
 
   return (
     <div>
@@ -55,8 +55,7 @@ const UserList = ({ setTeam, team }) => {
                 <Listbox.Option
                   key={index}
                   className={({ active }) =>
-                    `relative cursor-default select-none py-2 pl-10 pr-4. ${
-                      active ? "bg-amber-100 text-amber-900" : "text-gray-900"
+                    `relative cursor-default select-none py-2 pl-10 pr-4. ${active ? "bg-amber-100 text-amber-900" : "text-gray-900"
                     } `
                   }
                   value={user}

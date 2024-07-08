@@ -76,6 +76,7 @@ const AddTask = ({ open, setOpen, task }) => {
 
       setTimeout(() => {
         setOpen(false)
+        window.location.reload();
       }, 1500);
     } catch (err) {
       console.error(err);

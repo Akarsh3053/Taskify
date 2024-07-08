@@ -30,7 +30,7 @@ const NotificationPanel = () => {
     refetch();
   };
 
-  const viewHandler = async (type, id) => {
+  const viewHandler = async (el) => {
     setSelected(el)
     readHandler("one", el._id)
     setOpen(true);
