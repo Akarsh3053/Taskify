@@ -44,10 +44,11 @@ const Users = () => {
       const result = await deleteUser(selected);
 
       refetch();
-      toast.success(result.data.message);
+      toast.success("Deleted successfully!!");
       setSelected(null);
+
       setTimeout(() => {
-        setOpenAction(false);
+        setOpenDialog(false);
       }, 500);
 
     } catch (error) {
@@ -74,11 +75,11 @@ const Users = () => {
   const TableHeader = () => (
     <thead className='border-b border-gray-300'>
       <tr className='text-black text-left'>
-        <th className='py-2'>Full Name</th>
-        <th className='py-2'>Title</th>
-        <th className='py-2'>Email</th>
-        <th className='py-2'>Role</th>
-        <th className='py-2'>Active</th>
+        <th className='pl-2 py-2'>Full Name</th>
+        <th className='pl-2 py-2'>Title</th>
+        <th className='pl-2 py-2'>Email</th>
+        <th className='pl-2 py-2'>Role</th>
+        <th className='pl-2 py-2'>Active</th>
       </tr>
     </thead>
   );
