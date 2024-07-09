@@ -11,6 +11,12 @@ It is a simple MERN webapp for task management and planning. App's backend is po
 - Easy account management.
 - Seperate tracking and timeline pages.
 
+## Usage 
+- Admin User : ```admin@taskify.com```
+- Admin Pass : ```akarsh3053```
+
+#### For every new added user password is their email address.
+
 
 # Tech Used
 
@@ -18,6 +24,6 @@ It is a simple MERN webapp for task management and planning. App's backend is po
 
 
 ## Live Demo
-<a href="https://text-book.onrender.com" target="_blank"><img src="https://www.animatedimages.org/data/media/1096/animated-click-here-sign-and-button-image-0042.gif" /></a>
+<a href="https://owldone-taskify.netlify.app" target="_blank"><img src="https://www.animatedimages.org/data/media/1096/animated-click-here-sign-and-button-image-0042.gif" /></a>
 
 The website might take some time to load at first as the Render server goes to sleep, give it some time once it is on it works magically.
