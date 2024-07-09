@@ -54,6 +54,28 @@ const Login = () => {
             <div className='cell'>
               <div className='circle rotate-in-up-left'></div>
             </div>
+            <a href="http://www.owldone.site">
+              <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden sm:max-w-2xl m-4 hover:skew-x-2 hover:skew-y-1">
+                <div className="sm:flex">
+                  <div className="sm:shrink-0 h-40 w-40">
+                    <img
+                      className="w-full object-cover sm:h-full sm:w-48"
+                      src="/OwlDone.jpeg"
+                      alt="Card image"
+                    />
+                  </div>
+                  <div className="p-6 sm:p-8">
+                    <div className="uppercase italic tracking-wide text-md text-indigo-500 font-bold">
+                      Hey👋🏻, there!!
+                    </div>
+                    <p className="mt-2 text-slate-500">
+                      <span className="font-bold text-blue-600">Taskify</span> is an Internal tool, if you dont have acess to it you might wanna try
+                      <span className="font-semibold italic text-amber-700">OwlDone</span> for project planning and task-management. CLICK HERE !!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
 
