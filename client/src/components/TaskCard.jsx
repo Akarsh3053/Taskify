@@ -38,8 +38,7 @@ const TaskCard = ({ task }) => {
             <span className='text-lg'>{ICONS[task?.priority]}</span>
             <span className='uppercase'>{task?.priority} Priority</span>
           </div>
-
-          {user?.isAdmin && <TaskDialog task={task} />}
+          <TaskDialog task={task} />
         </div>
 
         <>
@@ -67,7 +66,7 @@ const TaskCard = ({ task }) => {
             </div>
             <div className='flex gap-1 items-center text-sm text-gray-600 '>
               <FaList />
-              <span>0/{task?.subTasks?.length}</span>
+              <span>{task?.subTasks?.length}</span>
             </div>
           </div>
 

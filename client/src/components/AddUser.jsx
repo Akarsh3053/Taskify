@@ -42,6 +42,7 @@ const AddUser = ({ open, setOpen, userData }) => {
 
       setTimeout(() => {
         setOpen(false)
+        window.location.reload();
       }, 1500);
 
     } catch (error) {

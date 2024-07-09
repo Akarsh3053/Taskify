@@ -43,17 +43,17 @@ const Users = () => {
     try {
       const result = await deleteUser(selected);
 
-      refetch();
       toast.success("Deleted successfully!!");
       setSelected(null);
 
       setTimeout(() => {
         setOpenDialog(false);
+        refetch();
       }, 500);
 
     } catch (error) {
       console.log(error);
-      toast.error("Something wen wrong!!")
+      toast.error("Something went wrong!!")
     }
   };
 
