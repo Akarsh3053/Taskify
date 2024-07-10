@@ -24,6 +24,14 @@ It is a simple MERN web app for task management and planning. The app's backend 
 
 # Steps for local setup
 
+##  Server Environment variables
+First, create the environment variables file `.env` in the server folder. The `.env` file contains the following environment variables:
+
+- NODE_ENV = development
+- MONGODB_URI = 'Mongo URI'
+- JWT_SECRET= 'Your Secret code'
+- PORT=8800
+
  ## Steps to run the server
 
 1. Open the project in any editor of your choice.
@@ -33,7 +41,7 @@ It is a simple MERN web app for task management and planning. The app's backend 
 
 If configured correctly, you should see a message indicating that the server is running successfully and `Database Connected`.
 
-## Environment variables
+## Client Environment variables
 First, create the environment variables file `.env` in the client folder. The `.env` file contains the following environment variables:
 
 - VITE_APP_BASE_URL = `http://localhost:8800` #Note: Change the port 8800 to your port number.
